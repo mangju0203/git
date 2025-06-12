@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>오늘, 어땠나요?</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="card index-card">
+    <h1>오늘 하루, 어떠셨나요?</h1>
+    <p class="subtext">편하게 기분을 골라주세요</p>
+    <form action="/response" method="post" class="buttons">
+      <button type="submit" name="feeling" value="very_good">😊 정말 좋았어요</button>
+      <button type="submit" name="feeling" value="good">🙂 나쁘지 않았어요</button>
+      <button type="submit" name="feeling" value="neutral">😐 그냥 그랬어요</button>
+      <button type="submit" name="feeling" value="bad">😔 조금 힘들었어요</button>
+      <button type="submit" name="feeling" value="very_bad">😣 많이 지쳤어요</button>
+    </form>
+  </div>
+</body>
+</html>
